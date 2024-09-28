@@ -1,17 +1,18 @@
 import React from "react";
-import Navbar from "./Pages/Navbar";
-import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
-import "./App.css";
+import "./Reset.css";
+import "../src/Pages/Navbar/Navbar.css";
+import Navbar from "./Pages/Navbar/Navbar.jsx";
+import { useGlobalContext } from "./Pages/Navbar/Context.jsx";
 
 function App() {
+  const { isSidebarOpen } = useGlobalContext();
+  console.log(isSidebarOpen);
   return (
-    <Router>
-      {/* Router contains all of our pages and paths */}
-      <Navbar />
-      <Routes>
-        <Route path="/" element={<h2>Welcome to the Home Page</h2>} />
-      </Routes>
-    </Router>
+    <>
+      <main>
+        <Navbar />
+      </main>
+    </>
   );
 }
 
