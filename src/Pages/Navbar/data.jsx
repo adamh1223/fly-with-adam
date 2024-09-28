@@ -10,7 +10,6 @@ import {
   FaBriefcase,
 } from "react-icons/fa";
 
-
 export const links = [
   {
     id: 1,
@@ -62,27 +61,69 @@ export const social = [
   },
 ];
 
-export const sublinks = [
+export const subLinks = [
   {
-    page: "about",
+    pageId: 100,
+    page: "About",
     links: [
-      { label: "About Me", icon: <FaBook />, url: "/products" },
-      { label: "My Gear", icon: <FaBook />, url: "/products" },
-      { label: "My Process", icon: <FaBook />, url: "/products" },
+      { id: 1, label: "About Me", icon: <FaBook />, url: "/products" },
+      { id: 2, label: "My Gear", icon: <FaBook />, url: "/products" },
+      { id: 3, label: "My Process", icon: <FaBook />, url: "/products" },
+      { id: 4, label: "Other Thing", icon: <FaBook />, url: "/products" },
     ],
   },
   {
-    page: "rentals",
+    pageId: 200,
+    page: "Rentals",
     links: [
-      { label: "DJI Inspire 3", icon: <FaBriefcase />, url: "/products" },
-      { label: "RED Komodo X", icon: <FaBriefcase />, url: "/products" },
+      {
+        id: 4,
+        label: "DJI Inspire 3",
+        icon: <FaBriefcase />,
+        url: "/products",
+      },
+      {
+        id: 5,
+        label: "RED Komodo X",
+        icon: <FaBriefcase />,
+        url: "/products",
+      },
     ],
   },
   {
-    page: "prints",
+    pageId: 300,
+    page: "Prints",
     links: [
-      { label: "Print Creation Process", icon: <FaBriefcase />, url: "/products" },
-      { label: "Prints", icon: <FaBriefcase />, url: "/products" },
+      {
+        id: 6,
+        label: "Print Creation Process",
+        icon: <FaBriefcase />,
+        url: "/products",
+      },
+      {
+        id: 7,
+        label: "Prints",
+        icon: <FaBriefcase />,
+        url: "/products",
+      },
+    ],
+  },
+  {
+    pageId: 400,
+    page: "Contact",
+    links: [
+      {
+        id: 8,
+        label: "Print Creation Process",
+        icon: <FaBriefcase />,
+        url: "/products",
+      },
+      {
+        id: 9,
+        label: "Prints",
+        icon: <FaBriefcase />,
+        url: "/products",
+      },
     ],
   },
 ];

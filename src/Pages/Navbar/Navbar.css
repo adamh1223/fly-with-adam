@@ -188,6 +188,7 @@ nav {
 }
 @media screen and (min-width: 918px) {
   .nav-center {
+    align-self: stretch;
     width: 100vw;
     display: flex;
     align-items: center;
@@ -208,6 +209,7 @@ nav {
   }
   .links {
     display: flex;
+    align-self: stretch;
   }
   .links a {
     padding: 0;
@@ -256,4 +258,60 @@ nav {
   left: 0;
   background-color: #0087ca;
   transition: transform 0.25s ease-out;
+}
+
+/* 
+============
+Submenu
+============
+*/
+
+.submenu {
+  display: none;
+  position: ab;
+}
+
+@media screen and (min-width: 918px) {
+  .submenu {
+    display: block;
+    position: fixed;
+    top: 4rem;
+    width: 650px;
+    background-color: #fff;
+    left: 54%;
+    padding: 2rem;
+    transform: rotateX(-90deg) translateX(-50%);
+    transform-origin: top;
+    perspective: 1000px;
+    visibility: hidden;
+    opacity: 0;
+    transition: transform 0.3s ease-in-out, opacity 0.2s ease-in-out;
+    border-radius: 20px;
+    z-index: 100;
+  }
+
+  .show-submenu {
+    visibility: visible;
+    opacity: 1;
+    transform: rotateX(0deg) translateX(-50%);
+  }
+  .submenu h5 {
+    margin-bottom: 1rem;
+    color: rgb(89, 87, 87);
+  }
+  .submenu-links {
+    display: grid;
+    row-gap: 0.5rem;
+  }
+  .submenu-links a {
+    display: block;
+    color: rgb(34, 34, 34);
+    text-transform: capitalize;
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+  }
+  .submenu-links svg {
+    color: green;
+  }
 }
