@@ -43,7 +43,9 @@ Variables
   --dark-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
   --max-width: 1170px;
   --fixed-width: 620px;
+  --proj-darkgray: rgb(66, 66, 66);
   --proj-lightgray: rgb(149, 146, 146);
+  --proj-gray: #151b1d;
   --proj-white: #fff;
   --proj-gold: #ffca6c;
 }
@@ -143,7 +145,7 @@ Navbar
 ===============
 */
 nav {
-  background: rgb(66, 66, 66);
+  background: var(--proj-darkgray);
   box-shadow: var(--light-shadow);
 }
 .nav-header {
@@ -299,7 +301,7 @@ Submenu
     position: fixed;
     top: 4rem;
     width: 650px;
-    background-color: var(--proj-lightgray);
+    background-color: var(--proj-gray);
     left: 54%;
     padding: 2rem;
     transform: rotateX(-90deg) translateX(-50%);
