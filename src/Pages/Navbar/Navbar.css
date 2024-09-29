@@ -43,6 +43,9 @@ Variables
   --dark-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
   --max-width: 1170px;
   --fixed-width: 620px;
+  --proj-lightgray: rgb(149, 146, 146);
+  --proj-white: #fff;
+  --proj-gold: #ffca6c;
 }
 /*
 =============== 
@@ -94,7 +97,7 @@ h4 {
 }
 p {
   margin-bottom: 1.25rem;
-  color: var(--clr-grey-5);
+  color: var(--proj-white);
 }
 @media screen and (min-width: 800px) {
   h1 {
@@ -140,7 +143,7 @@ Navbar
 ===============
 */
 nav {
-  background: var(--clr-white);
+  background: rgb(66, 66, 66);
   box-shadow: var(--light-shadow);
 }
 .nav-header {
@@ -151,42 +154,68 @@ nav {
 }
 .nav-toggle {
   font-size: 1.5rem;
-  color: var(--clr-primary-5);
+  color: var(--proj-white);
   background: transparent;
   border-color: transparent;
   transition: var(--transition);
-  cursor: pointer;
+  position: absolute;
+  right: 1rem;
+  top: 2.2rem;
 }
 .nav-toggle:hover {
-  color: var(--clr-primary-1);
+  color: var(--proj-gold);
   transform: rotate(90deg);
+  cursor: pointer;
 }
 .logo {
-  height: 40px;
+  height: 60px;
+  margin: 0 0 0 20px;
 }
 .links a {
-  color: var(--clr-grey-3);
-  font-size: 1rem;
+  color: var(--proj-white);
+  font-size: 1.4rem;
+  font-weight: 800;
   text-transform: capitalize;
   letter-spacing: var(--spacing);
   display: flex;
   justify-content: center;
   padding: 1.2rem 0.5rem;
-  transition: var(--transition);
 }
 .links a:hover {
-  background: var(--clr-primary-8);
-  color: var(--clr-primary-5);
+  background: var(--proj-white);
+  color: var(--proj-gold);
   padding-left: 1.5rem;
+  text-decoration: underline;
 }
 .social-icons {
-  display: none;
+  display: flex;
+  align-items: center;
+  margin-right: 1rem;
+  position: absolute;
+  top: 2.2rem;
+  right: 3rem;
 }
 .links-container {
   overflow: hidden;
   transition: var(--transition);
 }
-@media screen and (min-width: 918px) {
+.social-icons {
+  display: flex;
+}
+.social-icons a {
+  margin: 0 0.45rem;
+  color: var(--proj-gold);
+  transition: var(--transition);
+  font-size: 1.5rem;
+}
+.social-icons a:hover {
+  color: var(--proj-white);
+}
+@media screen and (min-width: 1026px) {
+  .social-icons {
+    right: 1rem;
+    top: 2.2rem;
+  }
   .nav-center {
     align-self: stretch;
     width: 100vw;
@@ -203,9 +232,9 @@ nav {
   }
   .links-container {
     height: auto !important;
-    width: 65vw;
+    width: 62vw;
     display: flex;
-    justify-content: center;
+    translate: -5%;
   }
   .links {
     display: flex;
@@ -214,22 +243,15 @@ nav {
   .links a {
     padding: 0;
     margin: 0 0.5rem;
+    font-weight: 400;
+    font-size: 1rem;
   }
   .links a:hover {
     padding: 0;
     background: transparent;
+    text-decoration: none;
   }
-  .social-icons {
-    display: flex;
-  }
-  .social-icons a {
-    margin: 0 1rem;
-    color: var(--clr-primary-5);
-    transition: var(--transition);
-  }
-  .social-icons a:hover {
-    color: var(--clr-primary-7);
-  }
+
   .hover-underline-animation:hover::after {
     transform: scaleX(1);
   }
@@ -256,7 +278,7 @@ nav {
   height: 2px;
   bottom: 0;
   left: 0;
-  background-color: #0087ca;
+  background-color: var(--proj-gold);
   transition: transform 0.25s ease-out;
 }
 
@@ -271,13 +293,13 @@ Submenu
   position: ab;
 }
 
-@media screen and (min-width: 918px) {
+@media screen and (min-width: 1026px) {
   .submenu {
     display: block;
     position: fixed;
     top: 4rem;
     width: 650px;
-    background-color: #fff;
+    background-color: var(--proj-lightgray);
     left: 54%;
     padding: 2rem;
     transform: rotateX(-90deg) translateX(-50%);
@@ -297,21 +319,37 @@ Submenu
   }
   .submenu h5 {
     margin-bottom: 1rem;
-    color: rgb(89, 87, 87);
+    color: var(--proj-white);
   }
   .submenu-links {
     display: grid;
     row-gap: 0.5rem;
   }
-  .submenu-links a {
-    display: block;
-    color: rgb(34, 34, 34);
+  .submenu-links a:hover {
+    color: var(--proj-gold);
+    transition: 0.3s ease-in-out;
+  }
+  .sublink-text {
+    display: inline-block;
+    color: var(--proj-white);
     text-transform: capitalize;
     display: flex;
-    align-items: center;
+    align-items: start;
+    margin: 0 0 2px 0;
     gap: 1rem;
   }
-  .submenu-links svg {
-    color: green;
+  .sublink-text:hover {
+    color: var(--proj-gold);
+    transition: 0.3s ease-in-out;
+  }
+  .submenu-icon {
+    color: var(--proj-gold);
+    display: inline-block;
+    margin-right: 0.5rem;
+  }
+  .submenu a {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
   }
 }

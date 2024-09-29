@@ -69,7 +69,7 @@ export const subLinks = [
       { id: 1, label: "About Me", icon: <FaBook />, url: "/products" },
       { id: 2, label: "My Gear", icon: <FaBook />, url: "/products" },
       { id: 3, label: "My Process", icon: <FaBook />, url: "/products" },
-      { id: 4, label: "Other Thing", icon: <FaBook />, url: "/products" },
+      { id: 4, label: "Testimonials", icon: <FaBook />, url: "/products" },
     ],
   },
   {
@@ -114,13 +114,13 @@ export const subLinks = [
     links: [
       {
         id: 8,
-        label: "Print Creation Process",
+        label: "Work with Me",
         icon: <FaBriefcase />,
         url: "/products",
       },
       {
         id: 9,
-        label: "Prints",
+        label: "1 on 1 Coaching",
         icon: <FaBriefcase />,
         url: "/products",
       },

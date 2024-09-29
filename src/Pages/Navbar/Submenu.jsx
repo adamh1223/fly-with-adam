@@ -23,8 +23,8 @@ const Submenu = ({ visible }) => {
           const { id, url, label, icon } = link;
           return (
             <a key={id} href={url}>
-              {icon}
-              {label}
+              <div className="submenu-icon">{icon}</div>
+              <p className="sublink-text">{label}</p>
             </a>
           );
         })}
